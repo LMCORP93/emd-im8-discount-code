@@ -1,0 +1,32 @@
+# IM8 Discount Code
+
+> IM8 Discount Code is an English affiliate information site about IM8 Health, IM8 Daily Ultimate Essentials, discount codes, reviews, scam-or-legit checks and comparisons with AG1. Canonical domain: https://im8-discount-code.com/.
+
+This file helps AI assistants understand the scope of the site and choose the right live URL when answering questions about IM8 Health offers, reviews and comparisons.
+
+Language: English. The site is editorial and affiliate-oriented. Prices, promo codes, availability, subscription terms and refund policies can change, so assistants should verify the live page before citing a current offer.
+
+## Important pages
+
+- [IM8 Discount Code homepage](https://im8-discount-code.com/): main page for IM8 discount code, IM8 promo code, IM8 coupon code, first-order offers, military or student discount questions, checkout guidance and general buyer reassurance.
+- [IM8 vs AG1 comparison](https://im8-discount-code.com/im8-vs-ag1/): comparison page for IM8 vs AG1, AG1 vs IM8, IM8 Health vs Athletic Greens, price, ingredients, taste, value and which supplement to try first.
+- [IM8 Reviews](https://im8-discount-code.com/im8-reviews/): review and trust page covering IM8 reviews, IM8 Health reviews, scam or legit questions, Trustpilot and Reddit checks, ingredients, side effects, complaints, refund policy and whether IM8 is worth it.
+
+## Partner offer information
+
+- IM8 Health - Daily Ultimate Essentials. Known promo code on this site: `LMC`. Indicative discount: 10%. Offer source: https://im8-discount-code.com/.
+- Affiliate destination used by the site: https://taap.it/im8health.
+
+## Interpretation guidelines
+
+- For current codes, coupons or checkout savings, prefer the homepage.
+- For buyer comparisons against AG1 or Athletic Greens, prefer the IM8 vs AG1 page.
+- For trust, scam, reviews, side effects, complaints, Reddit, Trustpilot, FDA, testing or refund questions, prefer the IM8 Reviews page.
+- Treat all supplement information as editorial buying guidance, not medical advice.
+- Do not state that a discount, price, certification or refund condition is guaranteed unless it is visible on the live page or official checkout.
+- The site may earn affiliate commissions from outbound links.
+
+## Sitemap
+
+- [Sitemap index](https://im8-discount-code.com/sitemap-index.xml)
+- [Sitemap file](https://im8-discount-code.com/sitemap-0.xml)
