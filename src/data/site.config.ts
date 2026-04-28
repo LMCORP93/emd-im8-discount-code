@@ -106,6 +106,7 @@ const config: SiteConfig = {
   ],
   pages: [
     { type: 'blog', label: 'Discount Code', slug: '/' },
+    { type: 'blog', label: 'IM8 vs AG1', slug: '/im8-vs-ag1/' },
   ],
 };
 

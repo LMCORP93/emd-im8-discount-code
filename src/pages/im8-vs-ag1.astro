@@ -1,0 +1,180 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BlogHero from '@/components/BlogHero.astro';
+import TableOfContents from '@/components/TableOfContents.astro';
+import ContentImage from '@/components/ContentImage.astro';
+import ReviewPromoCard from '@/components/ReviewPromoCard.astro';
+import SidebarCTA from '@/components/SidebarCTA.astro';
+import FAQSection from '@/components/FAQSection.astro';
+import config from '@/data/site.config';
+
+const topProduct = config.products[0];
+const promoProduct = { ...topProduct, productCategory: topProduct.productType, shipping: 'US / International' };
+const pageTitle = 'IM8 vs AG1: Price, Ingredients, Taste & Best Deal';
+const pageDescription = 'Compare IM8 vs AG1 in 2026: price, ingredients, taste, daily routine, reviews, value and which supplement is the smarter first order.';
+const tocItems = [
+  { id: 'quick-verdict', label: 'Quick verdict' },
+  { id: 'price', label: 'Price' },
+  { id: 'ingredients', label: 'Ingredients' },
+  { id: 'taste', label: 'Taste & routine' },
+  { id: 'who-im8', label: 'Who should choose IM8' },
+  { id: 'who-ag1', label: 'Who should choose AG1' },
+  { id: 'reviews', label: 'Reviews & trust' },
+  { id: 'best-deal', label: 'Best deal' },
+  { id: 'verdict', label: 'Final verdict' },
+  { id: 'faq', label: 'FAQ' },
+];
+const faq = [
+  { question: 'Is IM8 better than AG1?', answer: 'IM8 can be the better choice if you want to test a newer premium daily supplement with a strong first-order offer and a formula positioned around broad daily essentials. AG1 may be better if you specifically want the established greens-category reference. Compare labels, serving cost and checkout terms before choosing.' },
+  { question: 'Is AG1 cheaper than IM8?', answer: 'The cheaper option depends on the current checkout price, subscription terms, shipping and any first-order discount. Always compare price per serving rather than only the headline monthly price.' },
+  { question: 'Can I use an IM8 discount code when comparing IM8 vs AG1?', answer: 'Yes, if a verified IM8 code or partner offer is active, it can lower the first-order price and make the IM8 trial less risky. Confirm the discount in the checkout before payment.' },
+  { question: 'Should I buy IM8 or AG1 first?', answer: 'If your main hesitation is price and you have a working IM8 offer, IM8 is a logical first trial. If you already know you want a classic greens formula with a long track record, AG1 may fit your expectation better.' },
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'IM8 Discount Code', item: config.domain },
+      { '@type': 'ListItem', position: 2, name: 'IM8 vs AG1', item: new URL('/im8-vs-ag1/', config.domain).toString() },
+    ],
+  })} />
+  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: pageTitle,
+    description: pageDescription,
+    author: { '@type': 'Person', name: config.author.name },
+    datePublished: '2026-04-28',
+    dateModified: '2026-04-28',
+    mainEntityOfPage: new URL('/im8-vs-ag1/', config.domain).toString(),
+  })} />
+  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })),
+  })} />
+
+  <BlogHero
+    title={pageTitle}
+    description="A clear IM8 vs AG1 comparison for buyers choosing between two premium daily supplement drinks, with price, ingredients, taste, reviews and the best first-order deal."
+    author={config.author.name}
+    authorAvatar={config.author.avatar}
+    date="April 28, 2026"
+    readingTime="11 min read"
+    breadcrumbs={[{ label: 'IM8 Discount Code', href: '/' }, { label: 'IM8 vs AG1', href: '/im8-vs-ag1/' }]}
+    bannerImage="/images/content/im8-vs-ag1-comparison.webp"
+    product={{ name: topProduct.name, image: topProduct.image, promoCode: topProduct.promoCode, promoPercent: topProduct.promoPercent, originalPrice: topProduct.originalPrice, discountPrice: topProduct.discountPrice, affiliateLink: topProduct.affiliateLink }}
+    showOfferBlock={true}
+  />
+
+  <main style="background-color:#ffffff;">
+    <div class="container-large padding-global"><div class="padding-section-medium"><div class="blog-grid">
+      <div class="content-column">
+        <section id="quick-verdict" class="rich-text">
+          <h2>Quick verdict: IM8 vs AG1, which should you try first?</h2>
+          <p>If you are comparing <strong>IM8 vs AG1</strong>, you are probably not looking for a basic multivitamin. You are comparing two premium daily supplement drinks that promise convenience, better routines and fewer separate pills or powders. That is why the decision should not be based on branding alone.</p>
+          <p>The short version: <strong>IM8 is the more interesting first trial if the current checkout offer lowers your entry cost</strong>. AG1 is the safer reference point if you specifically want the most established greens-style daily drink. Both products sit in the same mental category, but they are not identical purchases.</p>
+          <p>For LMC, the business angle is simple. A user searching <strong>AG1 vs IM8</strong>, <strong>IM8 Health vs Athletic Greens</strong> or <strong>IM8 vs AG1 price</strong> is already educated and close to buying. The right page should help them decide, then send them to the verified IM8 offer when the value case is clear.</p>
+        </section>
+
+        <section class="template-promo-block" aria-label="IM8 comparison offer">
+          <ReviewPromoCard product={promoProduct} />
+        </section>
+
+        <TableOfContents items={tocItems} />
+
+        <section id="price" class="rich-text seo-guide">
+          <h2>IM8 vs AG1 price: compare the real checkout cost</h2>
+          <p>Price is usually the first question, but it is also the easiest one to misread. A monthly price does not tell the full story. You need to compare price per serving, one-time purchase price, subscription price, shipping, taxes, bundle savings and whether the first-order discount applies only once.</p>
+          <p>IM8 becomes more attractive when a working IM8 discount code, promo code or verified partner offer reduces the first order. That does not automatically make it cheaper forever, but it makes the trial less risky. For a premium supplement, that matters. Most buyers want to test taste, digestion and routine fit before committing to a recurring order.</p>
+          <p>AG1 has the advantage of being a known category leader. Some buyers accept the price because they already trust the brand or have heard about it for years. IM8 needs to win the comparison with a mix of formula, positioning, first-order value and trust signals.</p>
+          <p>The practical rule is this: if the IM8 checkout shows a meaningful discount and the formula fits what you want, IM8 is a smart first trial. If there is no working offer and you already know you want a classic greens supplement, AG1 may feel like the more familiar option.</p>
+          <p>Also check the cancellation path before choosing subscription pricing. A low first month is useful only if the renewal price is transparent and the account area makes it easy to pause or cancel. This is especially important for buyers who are using the comparison to test a new routine rather than commit for the full year.</p>
+        </section>
+
+        <ContentImage src="/images/content/im8-promo-checkout.webp" alt="Orange daily supplement drink near a blurred checkout screen" caption="For IM8 vs AG1, the best comparison starts with the final checkout price, not the headline discount." />
+
+        <section id="ingredients" class="rich-text seo-guide">
+          <h2>Ingredients comparison: do not compare marketing words only</h2>
+          <p>The biggest mistake in an IM8 vs AG1 comparison is comparing slogans instead of labels. Both brands use premium wellness language, but the real value is in the supplement facts panel: nutrients, dosages, ingredient categories, sweeteners, allergens and any proprietary blends.</p>
+          <p>AG1 is widely associated with greens, vitamins, minerals, adaptogens, digestive support and a daily foundational formula. IM8 is positioned around daily ultimate essentials, modern wellness, hydration support and a broader routine-simplification promise. That means the better product depends on what you need to replace.</p>
+          <p>If you already take a multivitamin, electrolyte powder, greens powder, probiotics or adaptogens, check for overlap before adding either product. Premium all-in-one formulas can be convenient, but they can also duplicate nutrients you already get elsewhere. More ingredients do not always mean better value.</p>
+          <p>For careful buyers, the right question is not just “which has more ingredients?” The right question is “which has the ingredients I actually want, at useful doses, without creating unnecessary overlap?” That is where IM8 and AG1 should be judged.</p>
+          <p>This is also why the comparison should be personal. A user who already eats plenty of greens may care more about hydration support, vitamins or convenience. A user with a weak breakfast routine may care more about consistency and satiety. A user already taking several capsules may care most about reducing supplement clutter. The label can only answer part of the question. The rest depends on what the product replaces in your day.</p>
+        </section>
+
+        <section id="taste" class="rich-text seo-guide">
+          <h2>Taste, mixability and daily routine</h2>
+          <p>A daily supplement only works if you keep using it. Taste and mixability are not secondary details. They decide whether a product becomes a real habit or sits unused in the cupboard after one week.</p>
+          <p>AG1 has years of customer feedback around taste, texture and how people mix it into morning routines. IM8 has strong curiosity because of its newer brand presence, celebrity visibility and premium aesthetic. But curiosity only converts into retention if the drink is easy to prepare and pleasant enough to repeat daily.</p>
+          <p>When reading IM8 reviews or AG1 reviews, look for repeated comments about flavor, aftertaste, sweetness, stomach comfort, mixing with water, mixing with smoothies and whether people continue after the first bag or tub. A single angry Reddit comment is less useful than a consistent pattern across many buyers.</p>
+          <p>If you are sensitive to sweeteners, botanicals or high-dose nutrient blends, start cautiously. A first-order discount is helpful, but your personal tolerance still matters more than a coupon.</p>
+          <p>Routine timing matters too. Some users want a breakfast replacement, others want a quick drink after training, and others want a supplement they can take before work. The better choice is the one that fits your actual morning without adding friction. A premium powder with perfect branding is still a bad buy if you avoid preparing it after three days.</p>
+        </section>
+
+        <section id="who-im8" class="rich-text seo-guide">
+          <h2>Who should choose IM8?</h2>
+          <p>IM8 makes the most sense for buyers who want to try a newer premium daily supplement and are already interested in the brand. If you searched for <strong>IM8 discount code</strong>, <strong>IM8 promo code</strong>, <strong>David Beckham IM8</strong> or <strong>IM8 reviews</strong>, you are probably in that group.</p>
+          <p>Choose IM8 first if you want a modern daily essentials formula, you like the idea of simplifying your supplement routine, you can get a verified first-order deal, and you are willing to compare the formula carefully against what you already take.</p>
+          <p>IM8 is also the better fit if the price reduction changes your trial decision. A premium supplement is easier to judge after using it consistently. If the offer lowers the first month enough to test it properly, the value case becomes stronger.</p>
+        </section>
+
+        <section class="template-promo-block" aria-label="Try IM8 before comparing long term">
+          <ReviewPromoCard product={promoProduct} />
+        </section>
+
+        <section id="who-ag1" class="rich-text seo-guide">
+          <h2>Who should choose AG1?</h2>
+          <p>AG1 is still the obvious reference for many buyers because it has category awareness, a long marketing history and a clear position as a premium greens-style daily drink. If your mental model is “I want Athletic Greens or something very similar,” AG1 may feel like the default option.</p>
+          <p>Choose AG1 if you want the more established brand, you value a large base of public feedback, and you specifically want a greens-led formula rather than testing a newer IM8 positioning. Familiarity can matter, especially when the product becomes part of a daily routine.</p>
+          <p>That said, brand familiarity should not stop you from checking price and label fit. If IM8 gives you a stronger first-order deal and the formula better matches your needs, choosing the newer brand can be rational.</p>
+        </section>
+
+        <ContentImage src="/images/content/im8-ingredients-flatlay.webp" alt="Natural ingredients and supplement powder for daily supplement comparison" caption="IM8 vs AG1 should be judged by formula fit, serving cost and routine adherence, not hype alone." />
+
+        <section id="reviews" class="rich-text seo-guide">
+          <h2>Reviews, Reddit, scam concerns and trust signals</h2>
+          <p>Searches like <strong>IM8 reviews</strong>, <strong>IM8 Trustpilot</strong>, <strong>IM8 Reddit</strong>, <strong>is IM8 a scam</strong> and <strong>IM8 complaints</strong> matter because premium supplements require trust. Buyers are not only comparing formulas. They are comparing risk.</p>
+          <p>For IM8, check the official checkout, refund policy, subscription terms, shipping information, ingredient transparency, third-party testing references and customer feedback patterns. For AG1, do the same. A trusted brand can still have customers who dislike taste or price. A newer brand can still be legitimate if the checkout, policies and label are clear.</p>
+          <p>Do not decide from coupon websites. Many coupon pages rank because discount terms have high buying intent, but they often provide little product context. A strong comparison page should explain why someone would choose IM8 or AG1, not only display a random code.</p>
+          <p>Trust also includes how the brand handles the boring details: shipping delays, refund requests, subscription reminders, account management and customer support. These details rarely appear in glossy ads, but they shape the real ownership experience. When two premium powders look similar, operational trust can be the deciding factor.</p>
+        </section>
+
+        <section id="best-deal" class="rich-text seo-guide">
+          <h2>Best deal: how to use the IM8 offer intelligently</h2>
+          <p>The best deal is not always the biggest number displayed in a badge. It is the offer that actually applies at checkout and matches the way you want to buy. For IM8, that can be a visible coupon code, a partner link, a first-order offer, subscription pricing or a bundle.</p>
+          <p>Use the IM8 discount as a trial advantage. Click the verified offer, check the product page, apply the code if needed, and confirm the final price before payment. If the lower price is visible in the checkout summary, then you can compare it fairly against AG1.</p>
+          <p>Do not buy only because a timer or coupon creates urgency. Buy because the formula fits, the terms are clear, the price per serving makes sense and you are comfortable testing the product for a real daily routine.</p>
+        </section>
+
+        <section id="verdict" class="rich-text seo-guide">
+          <h2>Final verdict: IM8 or AG1?</h2>
+          <p>For most discount-code visitors, IM8 is the page to push first because the buyer is already searching for IM8 savings. The comparison with AG1 should reassure them that they are not missing the obvious category leader, then bring the decision back to formula fit and first-order value.</p>
+          <p>Pick IM8 if you want a premium daily essentials product, you can access a verified first-order offer, and you want to test whether it can replace parts of your routine. Pick AG1 if you want the most familiar greens-category option and prefer the brand with the longer public track record.</p>
+          <p>The smartest path is to compare labels, compare the real checkout price, avoid fake coupon pages, and test the product that best matches your daily habit. If IM8 has the active offer, it deserves to be tested first.</p>
+          <p>From an SEO and conversion perspective, this page exists for that final hesitation moment. The user already knows both names. They now need a clean reason to click. The reason is not “IM8 is always better.” The reason is: if the formula fits and the current offer lowers the first order, IM8 is the lower-friction way to make the comparison real.</p>
+        </section>
+
+        <section class="template-promo-block" aria-label="Current IM8 promo offer">
+          <ReviewPromoCard product={promoProduct} />
+        </section>
+
+        <section id="faq" class="faq-section"><FAQSection faq={faq} title="Frequently asked questions" /></section>
+      </div>
+      <aside class="sidebar-column"><div class="sidebar-sticky"><SidebarCTA logoSrc={topProduct.brandLogo}
+              productName={topProduct.name}
+              brandName={topProduct.brand} promoCode={topProduct.promoCode} promoPercent={topProduct.promoPercent} originalPrice={topProduct.originalPrice} discountPrice={topProduct.discountPrice} ctaLink={topProduct.affiliateLink} heroImage={topProduct.image} rating={topProduct.rating} reviewCount={topProduct.reviewCount} /></div></aside>
+    </div></div></div>
+  </main>
+</BaseLayout>
+
+<style>
+  .seo-guide { margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #f0ebe3; }
+  .seo-guide .rich-text h3, .seo-guide h3 { margin-top: 2rem; margin-bottom: .75rem; font-size: 1.25rem; font-weight: 600; color: #242424; }
+  .seo-guide p { margin-bottom: 1rem; line-height: 1.8; color: #444; }
+  .faq-section { margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #f0ebe3; }
+  .template-promo-block { margin: 1.75rem 0 2rem; }
+</style>
