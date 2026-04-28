@@ -1,0 +1,163 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BlogHero from '@/components/BlogHero.astro';
+import TableOfContents from '@/components/TableOfContents.astro';
+import ContentImage from '@/components/ContentImage.astro';
+import ReviewPromoCard from '@/components/ReviewPromoCard.astro';
+import SidebarCTA from '@/components/SidebarCTA.astro';
+import FAQSection from '@/components/FAQSection.astro';
+import config from '@/data/site.config';
+
+const topProduct = config.products[0];
+const promoProduct = { ...topProduct, productCategory: topProduct.productType, shipping: 'US / International' };
+const pageTitle = 'IM8 Discount Code: Current Offers, First-Order Savings & Best Deal';
+const pageDescription = 'Looking for an IM8 discount code? Learn how to find the current IM8 Health promo, compare subscription vs one-time pricing, and avoid fake coupon sites.';
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [{ '@type': 'ListItem', position: 1, name: 'IM8 Discount Code', item: config.domain }],
+  })} />
+  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: config.faq.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })),
+  })} />
+
+  <BlogHero
+    title={pageTitle}
+    description="A practical guide to finding a real IM8 Health promo code, checking the final checkout price, and deciding whether IM8 is worth trying versus alternatives like AG1."
+    author={config.author.name}
+    authorAvatar={config.author.avatar}
+    date="April 28, 2026"
+    readingTime="12 min read"
+    breadcrumbs={[{ label: 'IM8 Discount Code', href: '/' }]}
+    bannerImage="/images/content/im8-discount-code-hero.webp"
+    product={{ name: topProduct.name, image: topProduct.image, promoCode: topProduct.promoCode, promoPercent: topProduct.promoPercent, originalPrice: topProduct.originalPrice, discountPrice: topProduct.discountPrice, affiliateLink: topProduct.affiliateLink }}
+    heroButton={{ text: 'Check current offer', href: topProduct.affiliateLink, external: true }}
+    showOfferBlock={false}
+  />
+
+  <main style="background-color:#ffffff;">
+    <div class="container-large padding-global"><div class="padding-section-medium"><div class="blog-grid">
+      <div class="content-column">
+        <section id="quick-answer" class="rich-text">
+          <h2>Quick answer: is there an IM8 discount code right now?</h2>
+          <p>If you are searching for an <strong>IM8 discount code</strong>, you are probably already close to buying. You have seen the David Beckham-backed wellness brand, you have checked the orange-red packaging, and now the real question is simple: is there a working IM8 promo code, and is the product worth the price?</p>
+          <p>The safest answer is this: IM8 savings are usually found through first-order offers, subscription pricing, bundle deals, limited campaigns or verified partner links rather than a permanent public coupon that works forever. That means the best deal is not always the random code displayed on a coupon website. The best deal is the offer that actually appears in the official IM8 checkout before payment.</p>
+          <p>For a first-time buyer, the right process is simple. Open a verified IM8 offer, compare the one-time price with the subscription price, apply the code if required, then confirm the final total before entering payment details. If the discount does not appear in the checkout summary, assume that the code is expired, country-restricted or not compatible with your cart.</p>
+        </section>
+
+        <section class="template-promo-block" aria-label="Verified IM8 offer">
+          <ReviewPromoCard product={promoProduct} />
+        </section>
+
+        <TableOfContents items={config.tocItems} />
+
+        <section id="why-growing" class="rich-text seo-guide">
+          <h2>Why IM8 discount code searches are growing</h2>
+          <p>IM8 is not just another supplement brand. The brand sits in a premium daily wellness category: clean packaging, celebrity visibility, all-in-one positioning and a product promise built around daily essentials, hydration, longevity and convenience. That creates strong curiosity, but it also creates price resistance.</p>
+          <p>When people search for <strong>IM8 discount code</strong>, they are not only looking for a bargain. They are looking for reassurance. They want to know whether IM8 is legitimate, whether the formula is strong enough to justify the price, and whether there is a smarter way to buy the first box without overpaying.</p>
+          <p>This is why related searches are so valuable: <strong>IM8 reviews</strong>, <strong>IM8 ingredients</strong>, <strong>IM8 side effects</strong>, <strong>IM8 vs AG1</strong>, <strong>IM8 Reddit</strong> and <strong>IM8 complaints</strong>. These queries show that buyers are not passive. They are comparing, checking trust signals and looking for proof before committing to a daily supplement routine.</p>
+          <p>A good IM8 discount page should therefore do more than show a coupon. It should help the buyer understand the offer, the real price, the product category and the risks of relying on fake coupon lists. That is the goal of this page.</p>
+        </section>
+
+        <ContentImage src="/images/content/im8-product-boxes-closeup.webp" alt="IM8 Daily Ultimate Essentials product boxes" caption="IM8 sits in the premium daily wellness category, so the discount matters most when it lowers the risk of a first order." />
+
+        <section id="find-code" class="rich-text seo-guide">
+          <h2>How to find a working IM8 promo code</h2>
+          <h3>1. Start with the official or verified offer</h3>
+          <p>Before trying random coupon codes, check whether IM8 is already applying a promotion automatically. Many supplement brands show the best public offer directly on the product page or at checkout. The discount may appear as a first-order saving, a subscription reduction, a bundle price or a campaign banner.</p>
+          <p>If the official checkout already includes a discount, external codes may not stack. That does not mean the code is bad. It simply means the brand only allows one offer at a time. The final checkout price is the source of truth.</p>
+          <h3>2. Compare one-time purchase vs subscription</h3>
+          <p>The biggest IM8 saving may come from subscription pricing rather than a classic coupon. That can be useful if you already plan to use the product every day, but it is not always the best first move. A subscription discount is only valuable if renewal terms are clear and cancellation is easy.</p>
+          <p>Before subscribing, check the renewal price, delivery frequency, refund policy, minimum commitment if any, and whether the first-order discount disappears after the first shipment. A low first payment can become expensive if you forget the renewal date.</p>
+          <h3>3. Use a verified partner link</h3>
+          <p>A verified partner link can be better than a visible coupon because it may apply the offer automatically. This is common in supplements, fitness and wellness campaigns. The advantage is lower friction: click the verified offer, reach the product page, and check whether the saving appears in the cart.</p>
+          <p>The risk is that some websites claim to provide a discount but simply redirect to a normal product page. Always verify the cart total. Never assume a code worked until you see the lower price before payment.</p>
+          <h3>4. Ignore fake coupon pages</h3>
+          <p>Coupon websites often rank for brand discount terms because the buying intent is high. Many of them display expired offers, scraped codes, fake “verified today” labels or generic discount promises that never apply. With a supplement like IM8, this creates unnecessary noise for buyers who simply want the real deal.</p>
+          <p>Red flags include pages listing dozens of codes for a brand that normally runs one campaign, codes that all claim to work today, offers that require installing a browser extension, and coupon pages with no product context or actual IM8 review.</p>
+        </section>
+
+        <section class="template-promo-block" aria-label="IM8 discount code card">
+          <ReviewPromoCard product={promoProduct} />
+        </section>
+
+        <section id="price" class="rich-text seo-guide">
+          <h2>IM8 price: what to check before buying</h2>
+          <p>Before using any IM8 coupon code, check the total cost rather than the headline discount. The important numbers are price per serving, one-time purchase price, subscription price, shipping cost, taxes, import fees if relevant, serving count and refund terms.</p>
+          <p>A 10% or 20% first-order discount can be attractive, but the long-term question is different: does IM8 replace enough separate products to justify the monthly cost? If it replaces a multivitamin, hydration mix and parts of a broader daily supplement routine, the value may make sense. If you only need one narrow ingredient, a premium all-in-one formula may be more than you need.</p>
+          <p>Buyers should also check whether the discount applies to the full cart or only to one product, whether bundles reduce the price per serving, and whether shipping changes the real final cost. A code that looks good on the product page can be less impressive if shipping or taxes offset the saving.</p>
+          <p>The practical rule: buy IM8 because the formula and routine fit your needs, then use the discount to lower the entry cost. Do not buy only because a coupon created urgency.</p>
+        </section>
+
+        <ContentImage src="/images/content/im8-orange-drink-routine.webp" alt="IM8 orange drink prepared in a glass" caption="The best IM8 deal is the one that makes the first trial easier without hiding the real recurring cost." />
+
+        <section id="vs-ag1" class="rich-text seo-guide">
+          <h2>IM8 vs AG1: why this comparison matters</h2>
+          <p>One of the strongest related searches is <strong>IM8 vs AG1</strong>. That makes sense. AG1, also known as Athletic Greens, is the best-known premium daily greens supplement. IM8 enters a similar mental category: daily drink, premium price, strong lifestyle branding and a promise to simplify the supplement routine.</p>
+          <p>The comparison should not be reduced to price. The better question is what each product is trying to replace. AG1 is known for greens, vitamins, minerals, adaptogens, probiotics and digestive support. IM8 is positioned around daily ultimate essentials, modern wellness, hydration support and longevity-oriented convenience. Buyers should compare labels carefully, not just brand language.</p>
+          <p>Taste also matters. A supplement used daily only works if people actually drink it consistently. That is why searches like <strong>IM8 reviews taste</strong>, <strong>IM8 reviews Reddit</strong> and <strong>IM8 reviews and complaints</strong> matter. They reveal whether customers continue using the product after the initial curiosity.</p>
+          <p>Price per serving is where an IM8 discount code can change the trial decision. If the first order becomes meaningfully cheaper, it is easier to test IM8 against AG1 or another daily supplement. But the second-order price still matters. A first-order discount should be treated as a trial advantage, not proof that the product is automatically the best value forever.</p>
+        </section>
+
+        <section id="ingredients" class="rich-text seo-guide">
+          <h2>IM8 ingredients: why buyers check before using a code</h2>
+          <p>The keyword <strong>IM8 ingredients</strong> has strong buying intent because supplement buyers are more educated than before. They want to know what they are putting into their body every day. A premium daily powder must be judged by label transparency, ingredient logic and dose clarity, not by packaging alone.</p>
+          <p>Before buying, check the full supplement facts label, dosages, vitamin and mineral amounts, sweeteners, flavoring agents, allergens and whether any blends are proprietary. Ingredient names alone are not enough. The dose is what tells you whether a formula is meaningful or decorative.</p>
+          <p>This matters even more if you already take other supplements. All-in-one products can overlap with multivitamins, magnesium, probiotics, greens powders, hydration mixes, adaptogens or other daily wellness products. Doubling up is not always dangerous, but it should be intentional.</p>
+          <p>If you are sensitive to sweeteners, botanicals, high-dose vitamins or digestive ingredients, start carefully. A discount code lowers the purchase price, but it does not replace basic label review.</p>
+        </section>
+
+        <section class="template-promo-block" aria-label="Current IM8 promo offer">
+          <ReviewPromoCard product={promoProduct} />
+        </section>
+
+        <section id="side-effects" class="rich-text seo-guide">
+          <h2>IM8 side effects: what to keep in mind</h2>
+          <p>Searches around <strong>IM8 side effects</strong> have high commercial value because they come from cautious buyers. They are not necessarily negative. They usually mean the person is close to buying but wants reassurance before taking a daily powder.</p>
+          <p>With daily supplement drinks, possible tolerance issues can include digestive discomfort, bloating, taste fatigue, sensitivity to sweeteners, reactions to certain botanicals or overlap with other supplements. This does not mean IM8 causes these effects for everyone. It means the buyer should read the label, consider their own context and avoid stacking multiple products blindly.</p>
+          <p>Practical tips: start with a smaller serving if you are sensitive, mix it with enough water, avoid combining it with several similar formulas on day one, and ask a health professional if you are pregnant, medicated, managing a condition or unsure about a specific ingredient.</p>
+          <p>This section belongs on a discount code site because trust matters. A page that only screams “use this coupon” feels thin. A page that explains the offer and the buying considerations helps the user make a better decision.</p>
+        </section>
+
+        <section id="reddit-complaints" class="rich-text seo-guide">
+          <h2>IM8 Reddit, Trustpilot and complaints: how to read them</h2>
+          <p>Reddit can be useful, but it is not perfect. You can find honest experiences, skeptical comments, taste feedback, comparisons with AG1 and questions about value for money. You can also find people judging the product without using it. Use Reddit for patterns, not single opinions.</p>
+          <p>Look for repeated comments about taste, mixability, digestion, shipping, subscription management, refund experience and whether users felt the formula was worth the price after several weeks. One extreme review is less useful than ten comments pointing to the same strength or weakness.</p>
+          <p>The same applies to complaints. A few complaints do not automatically make a product bad. But repeated issues around billing, cancellation, shipping or misleading discounts are worth taking seriously before subscribing.</p>
+        </section>
+
+        <ContentImage src="/images/content/im8-promo-card-background.webp" alt="IM8 promotional product visual" caption="A real IM8 promo should be judged at checkout: code applied, final price visible, terms clear." />
+
+        <section id="verdict" class="rich-text seo-guide">
+          <h2>Final verdict: what is the best IM8 deal?</h2>
+          <p>The best IM8 deal is the one that gives you a real checkout discount without locking you into terms you do not understand. For most buyers, the cleanest path is to use a verified IM8 offer, start with the lowest-risk first order, avoid fake coupon websites, compare subscription savings carefully and read IM8 reviews, ingredients and side effect information before committing long term.</p>
+          <p>If you are comparing IM8 with AG1, do not decide only on price. Compare formula logic, serving cost, taste feedback, customer experience and what each product replaces in your routine. IM8 can make sense as a premium daily supplement if you want convenience and a broader formula. It makes less sense if you only need one narrow ingredient at the lowest possible price.</p>
+          <p>For first-time buyers, an <strong>IM8 discount code</strong> is useful because it lowers the entry cost. But the real decision is whether IM8 earns a place in your daily routine after the first box.</p>
+        </section>
+
+        <section class="template-promo-block" aria-label="Try IM8 with current discount">
+          <ReviewPromoCard product={promoProduct} />
+        </section>
+
+        <section id="faq" class="faq-section"><FAQSection faq={config.faq} title="Frequently asked questions" /></section>
+      </div>
+      <aside class="sidebar-column"><div class="sidebar-sticky"><SidebarCTA logoSrc={topProduct.brandLogo}
+              productName={topProduct.name}
+              brandName={topProduct.brand} promoCode={topProduct.promoCode} promoPercent={topProduct.promoPercent} originalPrice={topProduct.originalPrice} discountPrice={topProduct.discountPrice} ctaLink={topProduct.affiliateLink} heroImage={topProduct.image} rating={topProduct.rating} reviewCount={topProduct.reviewCount} /></div></aside>
+    </div></div></div>
+  </main>
+</BaseLayout>
+
+<style>
+  .seo-guide { margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #f0ebe3; }
+  .seo-guide .rich-text h3, .seo-guide h3 { margin-top: 2rem; margin-bottom: .75rem; font-size: 1.25rem; font-weight: 600; color: #242424; }
+  .seo-guide p { margin-bottom: 1rem; line-height: 1.8; color: #444; }
+  .faq-section { margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #f0ebe3; }
+  .template-promo-block { margin: 1.75rem 0 2rem; }
+  .template-promo-block :global(.rpc-card) { padding-block: 1.25rem; }
+</style>

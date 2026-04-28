@@ -1,0 +1,26 @@
+# Canonical host
+https://www.sugar-free-electrolytes.com/*  https://sugar-free-electrolytes.com/:splat  301
+
+# Legacy/general redirects
+/contact / 301
+/contact/ / 301
+/electrolytes-without-sugar / 301
+/electrolytes-without-sugar/ / 301
+/zero-sugar-hydration-powder / 301
+/zero-sugar-hydration-powder/ / 301
+
+# Old French URLs to English URLs
+/boisson-electrolyte        /electrolyte-drink/        301
+/boisson-electrolyte/       /electrolyte-drink/        301
+/poudre-electrolyte         /electrolyte-powder/       301
+/poudre-electrolyte/        /electrolyte-powder/       301
+/electrolytes-sport         /electrolytes-for-sport/   301
+/electrolytes-sport/        /electrolytes-for-sport/   301
+/electrolytes-naturels      /natural-electrolytes/     301
+/electrolytes-naturels/     /natural-electrolytes/     301
+/electrolytes-danger        /electrolytes-side-effects/ 301
+/electrolytes-danger/       /electrolytes-side-effects/ 301
+/mentions-legales           /legal-notice/             301
+/mentions-legales/          /legal-notice/             301
+/politique-de-confidentialite /privacy-policy/         301
+/politique-de-confidentialite/ /privacy-policy/        301
