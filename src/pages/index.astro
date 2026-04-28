@@ -36,8 +36,7 @@ const pageDescription = 'Looking for an IM8 discount code? Learn how to find the
     breadcrumbs={[{ label: 'IM8 Discount Code', href: '/' }]}
     bannerImage="/images/content/im8-discount-code-hero.webp"
     product={{ name: topProduct.name, image: topProduct.image, promoCode: topProduct.promoCode, promoPercent: topProduct.promoPercent, originalPrice: topProduct.originalPrice, discountPrice: topProduct.discountPrice, affiliateLink: topProduct.affiliateLink }}
-    heroButton={{ text: 'Check current offer', href: topProduct.affiliateLink, external: true }}
-    showOfferBlock={false}
+    showOfferBlock={true}
   />
 
   <main style="background-color:#ffffff;">
@@ -159,5 +158,4 @@ const pageDescription = 'Looking for an IM8 discount code? Learn how to find the
   .seo-guide p { margin-bottom: 1rem; line-height: 1.8; color: #444; }
   .faq-section { margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #f0ebe3; }
   .template-promo-block { margin: 1.75rem 0 2rem; }
-  .template-promo-block :global(.rpc-card) { padding-block: 1.25rem; }
 </style>
