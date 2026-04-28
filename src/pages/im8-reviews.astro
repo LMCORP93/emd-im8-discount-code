@@ -1,0 +1,186 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BlogHero from '@/components/BlogHero.astro';
+import TableOfContents from '@/components/TableOfContents.astro';
+import ContentImage from '@/components/ContentImage.astro';
+import ReviewPromoCard from '@/components/ReviewPromoCard.astro';
+import SidebarCTA from '@/components/SidebarCTA.astro';
+import FAQSection from '@/components/FAQSection.astro';
+import config from '@/data/site.config';
+
+const topProduct = config.products[0];
+const promoProduct = { ...topProduct, productCategory: topProduct.productType, shipping: 'US / International' };
+const pageTitle = 'IM8 Reviews 2026: Scam, Legit, Side Effects & Worth It?';
+const pageDescription = 'Read this IM8 review before buying: scam or legit signals, Trustpilot and Reddit checks, ingredients, side effects, price, refund policy and best discount.';
+const tocItems = [
+  { id: 'quick-verdict', label: 'Quick verdict' },
+  { id: 'what-is-im8', label: 'What is IM8?' },
+  { id: 'scam-legit', label: 'Scam or legit?' },
+  { id: 'reviews-complaints', label: 'Reviews & complaints' },
+  { id: 'ingredients', label: 'Ingredients' },
+  { id: 'side-effects', label: 'Side effects' },
+  { id: 'price-worth-it', label: 'Price & worth it' },
+  { id: 'trustpilot-reddit', label: 'Trustpilot & Reddit' },
+  { id: 'refund', label: 'Refund & subscription' },
+  { id: 'verdict', label: 'Final verdict' },
+  { id: 'faq', label: 'FAQ' },
+];
+const faq = [
+  { question: 'Is IM8 a scam?', answer: 'IM8 should not be judged from coupon pages alone. Check the official checkout, supplement facts label, refund policy, subscription terms, third-party testing claims and repeated customer feedback patterns before deciding.' },
+  { question: 'Is IM8 legit?', answer: 'IM8 appears to be positioned as a legitimate premium daily supplement brand, but buyers should still verify the offer, label, refund terms and checkout price before purchasing.' },
+  { question: 'Are IM8 reviews positive?', answer: 'IM8 reviews should be read by pattern: taste, mixability, digestion, price, shipping, subscription management and whether users keep taking it after the first order.' },
+  { question: 'Does IM8 have side effects?', answer: 'Any daily supplement powder can cause tolerance issues for some users, including digestive discomfort, bloating, sweetener sensitivity or overlap with other supplements. Read the label and ask a professional if pregnant, medicated or unsure.' },
+  { question: 'Is IM8 worth it?', answer: 'IM8 is worth considering if you want a premium all-in-one daily powder, the formula fits your routine and the current discount lowers the first-order risk. It is less compelling if you only need one narrow ingredient at the lowest price.' },
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'IM8 Discount Code', item: config.domain },
+      { '@type': 'ListItem', position: 2, name: 'IM8 Reviews', item: new URL('/im8-reviews/', config.domain).toString() },
+    ],
+  })} />
+  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: pageTitle,
+    description: pageDescription,
+    author: { '@type': 'Person', name: config.author.name },
+    datePublished: '2026-04-28',
+    dateModified: '2026-04-28',
+    mainEntityOfPage: new URL('/im8-reviews/', config.domain).toString(),
+  })} />
+  <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })),
+  })} />
+
+  <BlogHero
+    title={pageTitle}
+    description="A practical IM8 review for buyers checking whether IM8 Health is legit, worth the price, safe to try, and better judged through reviews, ingredients and the real checkout offer."
+    author={config.author.name}
+    authorAvatar={config.author.avatar}
+    date="April 28, 2026"
+    readingTime="12 min read"
+    breadcrumbs={[{ label: 'IM8 Discount Code', href: '/' }, { label: 'IM8 Reviews', href: '/im8-reviews/' }]}
+    bannerImage="/images/content/im8-discount-code-hero.webp"
+    product={{ name: topProduct.name, image: topProduct.image, promoCode: topProduct.promoCode, promoPercent: topProduct.promoPercent, originalPrice: topProduct.originalPrice, discountPrice: topProduct.discountPrice, affiliateLink: topProduct.affiliateLink }}
+    showOfferBlock={true}
+  />
+
+  <main style="background-color:#ffffff;">
+    <div class="container-large padding-global"><div class="padding-section-medium"><div class="blog-grid">
+      <div class="content-column">
+        <section id="quick-verdict" class="rich-text">
+          <h2>Quick verdict: what do IM8 reviews really tell us?</h2>
+          <p>If you search for <strong>IM8 reviews</strong>, <strong>IM8 Health reviews</strong>, <strong>IM8 supplement review</strong> or <strong>is IM8 a scam</strong>, you are probably close to buying but not fully reassured yet. That is the right instinct. Premium daily powders are not impulse purchases. They sit in your daily routine, your budget and sometimes your subscription list.</p>
+          <p>The short version: <strong>IM8 looks like a premium all-in-one supplement worth considering, but it should be judged carefully before checkout</strong>. The brand has strong visibility, a clean wellness positioning and clear demand around discounts, AG1 comparisons, ingredients and scam-or-legit checks. That does not mean every buyer should subscribe immediately. It means the product deserves a proper review rather than a blind coupon click.</p>
+          <p>For most first-time buyers, IM8 makes the most sense if three things are true: the formula fits what you actually want, the checkout offer lowers the entry cost, and the subscription or refund terms are clear enough that you are not taking unnecessary risk. If one of those is missing, pause before buying.</p>
+        </section>
+
+        <section class="template-promo-block" aria-label="Verified IM8 review offer">
+          <ReviewPromoCard product={promoProduct} />
+        </section>
+
+        <TableOfContents items={tocItems} />
+
+        <section id="what-is-im8" class="rich-text seo-guide">
+          <h2>What is IM8?</h2>
+          <p>IM8 Health is a wellness supplement brand built around a premium daily routine. The main product searched in this cluster is <strong>IM8 Daily Ultimate Essentials</strong>, an all-in-one daily supplement powder. Buyers usually discover it through celebrity visibility, premium packaging, comparison content, discount code searches or questions like <strong>what is IM8</strong> and <strong>what is IM8 supplement</strong>.</p>
+          <p>The product sits in the same mental category as AG1 and other daily foundational powders: one drink that attempts to simplify vitamins, minerals, hydration, greens or broader wellness support into a single habit. That convenience is the main appeal. Instead of buying several separate supplements, users consider one daily drink.</p>
+          <p>That positioning is also the reason reviews matter. With an all-in-one product, the buyer is not only asking “does this contain good ingredients?” They are asking whether the formula is useful, whether the taste is repeatable, whether it replaces enough products to justify the cost, and whether the brand handles shipping, billing and support properly.</p>
+        </section>
+
+        <ContentImage src="/images/content/im8-ingredients-flatlay.webp" alt="Daily supplement ingredients arranged beside an orange wellness powder" caption="A useful IM8 review should look beyond the coupon and check formula fit, tolerance, price and buyer risk." />
+
+        <section id="scam-legit" class="rich-text seo-guide">
+          <h2>Is IM8 a scam or legit?</h2>
+          <p>The query <strong>is IM8 a scam</strong> is one of the strongest trust signals in the keyword data. It does not automatically mean people think the brand is fake. It usually means buyers are seeing ads, celebrity mentions or discount pages and want proof before entering payment details.</p>
+          <p>A fair scam-or-legit check should focus on evidence, not drama. Look at the official website, checkout process, ingredient label, refund policy, subscription terms, contact details, third-party testing claims, customer feedback and whether the advertised discount actually appears before payment. If these elements are visible and consistent, the scam risk is lower. If they are vague, hidden or contradictory, the buyer should slow down.</p>
+          <p>The wrong way to evaluate IM8 is to rely only on a coupon website that lists dozens of “verified today” codes without product context. Coupon pages are built to capture buying intent. They are not always built to protect the buyer. A real IM8 review should explain the product, the offer and the risks clearly.</p>
+          <p>So the practical answer is cautious: IM8 appears to be a legitimate premium supplement brand, but the buyer should still verify the current checkout, read the label, understand the renewal terms and avoid assuming that every promo code displayed online is real.</p>
+        </section>
+
+        <section id="reviews-complaints" class="rich-text seo-guide">
+          <h2>IM8 reviews and complaints: what to look for</h2>
+          <p>When reading IM8 reviews, ignore isolated extremes first. One glowing testimonial does not prove a product is perfect. One angry comment does not prove it is bad. The useful signal is repetition. If many buyers mention the same strength or the same weakness, that pattern deserves attention.</p>
+          <p>The most useful review categories are taste, mixability, digestion, energy or routine feel, price perception, shipping speed, packaging, customer support, cancellation experience and whether users continue after the first order. A daily supplement only works if the habit survives past the first week.</p>
+          <p>For complaints, separate product tolerance from operational problems. Some buyers may dislike taste or feel bloated because their body does not tolerate a formula well. That can happen with many powders. Operational complaints are different: unclear subscriptions, hard cancellations, poor support, delayed shipping or discounts that fail at checkout. Those issues affect every buyer’s risk, even if the formula is good.</p>
+          <p>Because IM8 is premium, value-for-money feedback is especially important. Users may like the brand but still decide the monthly cost is too high. That does not make the product bad. It means IM8 needs to replace enough separate products or create enough routine value to justify the price.</p>
+        </section>
+
+        <section class="template-promo-block" aria-label="Current IM8 discount for review readers">
+          <ReviewPromoCard product={promoProduct} />
+        </section>
+
+        <section id="ingredients" class="rich-text seo-guide">
+          <h2>IM8 ingredients: review the label before the hype</h2>
+          <p>Ingredient searches are small in volume but high in value. People searching <strong>IM8 ingredients</strong>, <strong>IM8 nutrition facts</strong>, <strong>IM8 nutrition label</strong>, <strong>does IM8 have caffeine</strong> or <strong>does IM8 have NMN</strong> are not casually browsing. They are checking whether the product fits their body and their existing supplement stack.</p>
+          <p>The right process is simple: read the supplement facts label, check doses, check allergens, check sweeteners, check proprietary blends and compare the formula with what you already take. Ingredient names alone are not enough. The dose and form determine whether a formula is meaningful.</p>
+          <p>All-in-one products can be convenient, but overlap is possible. If you already take a multivitamin, magnesium, greens powder, electrolyte mix, probiotics, creatine, omega-3, collagen or other daily formulas, verify whether IM8 duplicates anything. Doubling up is not always a problem, but it should be intentional.</p>
+          <p>For athletes, certification and testing questions matter too. Queries around NSF, third-party testing, heavy metals and clinical trials show that some users are careful buyers. The safe wording is to verify the exact product listing, batch or official certification claim rather than assuming every marketing phrase applies to every shipment.</p>
+        </section>
+
+        <ContentImage src="/images/content/im8-promo-checkout.webp" alt="Orange daily supplement drink beside a checkout screen" caption="The best IM8 review ends at the checkout: final price visible, discount applied and subscription terms clear." />
+
+        <section id="side-effects" class="rich-text seo-guide">
+          <h2>IM8 side effects: realistic risks to consider</h2>
+          <p>Searches like <strong>IM8 side effects</strong>, <strong>IM8 supplement side effects</strong>, <strong>IM8 constipation</strong>, <strong>IM8 gas</strong> and <strong>is IM8 safe</strong> show a cautious buying intent. This is valuable traffic because the user is not rejecting the product. They are trying to avoid a bad first experience.</p>
+          <p>With daily powders, possible tolerance issues can include digestive discomfort, bloating, gas, changes in bowel habits, taste fatigue, sensitivity to sweeteners, reaction to botanicals or overlap with other supplements. This does not mean IM8 causes these effects for everyone. It means the buyer should start thoughtfully.</p>
+          <p>Practical approach: read the label, start with a smaller serving if you are sensitive, mix it with enough water, avoid stacking several new supplements on the same day, and monitor how you feel over the first week. If you are pregnant, breastfeeding, medicated, managing a medical condition or unsure about a specific ingredient, ask a qualified health professional before using it.</p>
+          <p>A discount code does not reduce health risk. It only reduces purchase risk. That distinction matters. The best buyer decision combines both: lower first-order cost and a formula that makes sense for your personal context.</p>
+        </section>
+
+        <section id="price-worth-it" class="rich-text seo-guide">
+          <h2>Is IM8 worth it for the price?</h2>
+          <p>The query <strong>is IM8 worth it</strong> is the real conversion question behind many review searches. IM8 is not competing with a cheap single-ingredient supplement. It competes with the idea of simplifying a daily wellness routine. That means the value depends on what it replaces.</p>
+          <p>IM8 is easier to justify if it replaces multiple products, if you like the taste enough to use it daily, if the formula covers nutrients you actually want, and if the current checkout offer lowers the cost of the first test. It is harder to justify if you only need one ingredient, already have a complete supplement routine, or dislike subscriptions.</p>
+          <p>Compare price per serving, one-time purchase price, subscription price, shipping, taxes, refund policy and renewal terms. Do not compare only the discount percentage. A 20% badge is not useful if the final cart is still too expensive or if the renewal is unclear.</p>
+          <p>For a first-time buyer, the smartest move is to treat the discount as a trial tool. Use the verified offer if it is active, test whether the product fits your daily routine, then decide whether the recurring price makes sense after real use.</p>
+        </section>
+
+        <section id="trustpilot-reddit" class="rich-text seo-guide">
+          <h2>IM8 Trustpilot, Reddit and review sites</h2>
+          <p>Trustpilot, Reddit and review websites can all be useful, but none of them should be treated as perfect. Trustpilot can highlight customer service and delivery patterns. Reddit can surface skeptical, practical or experience-based comments. Review sites can structure the buying criteria. Each source has bias.</p>
+          <p>On Reddit, look for patterns around taste, digestion, price, comparison with AG1, cancellation and whether people actually finished the product. Ignore comments from people who clearly never used it unless they raise a specific evidence-based concern. On Trustpilot, look beyond the star rating and read the recurring themes.</p>
+          <p>Also remember that newer brands can have less review volume than older competitors. Low review volume is not automatically bad. It simply means you should rely more on verifiable facts: label, checkout, policies, testing claims and your own tolerance after a careful first order.</p>
+        </section>
+
+        <section id="refund" class="rich-text seo-guide">
+          <h2>Refund policy, subscription and checkout checks</h2>
+          <p>Before buying IM8, check the refund policy and subscription terms. This is not boring admin detail. It is part of the review. Many supplement complaints come less from the formula and more from unclear renewals, unexpected shipping costs or difficulty cancelling.</p>
+          <p>Before payment, verify the final price, whether the discount applied, shipping cost, delivery country, renewal date, cancellation method, refund window and whether returns require unopened products. Screenshotting the checkout summary can also help if a support issue appears later.</p>
+          <p>If you are unsure, start with the lowest-risk purchase path rather than the biggest bundle. Bigger bundles can reduce price per serving, but they also increase regret if the taste or tolerance does not fit you. For first-time buyers, a clean discounted trial is often smarter than maximum volume.</p>
+        </section>
+
+        <section id="verdict" class="rich-text seo-guide">
+          <h2>Final verdict: should you buy IM8?</h2>
+          <p>IM8 is worth considering if you want a premium daily supplement powder, like the idea of simplifying your routine, and can access a verified first-order offer. The product has enough search demand around reviews, discount codes, scam-or-legit checks, AG1 comparisons and ingredients to justify a dedicated review page.</p>
+          <p>The strongest buying case is this: if the formula fits your needs and the current discount lowers the trial cost, IM8 is a reasonable product to test. The weaker case is buying only because celebrity branding or coupon urgency pushed you into checkout before you checked the label and terms.</p>
+          <p>For cautious buyers, the best path is simple. Read the label, compare the checkout price, check reviews for patterns, understand subscription terms, then use the verified offer if the product still makes sense. A good IM8 review should not force a yes. It should help you avoid a bad purchase and identify when the offer is genuinely worth trying.</p>
+        </section>
+
+        <section class="template-promo-block" aria-label="Try IM8 after reading the review">
+          <ReviewPromoCard product={promoProduct} />
+        </section>
+
+        <section id="faq" class="faq-section"><FAQSection faq={faq} title="Frequently asked questions" /></section>
+      </div>
+      <aside class="sidebar-column"><div class="sidebar-sticky"><SidebarCTA logoSrc={topProduct.brandLogo}
+              productName={topProduct.name}
+              brandName={topProduct.brand} promoCode={topProduct.promoCode} promoPercent={topProduct.promoPercent} originalPrice={topProduct.originalPrice} discountPrice={topProduct.discountPrice} ctaLink={topProduct.affiliateLink} heroImage={topProduct.image} rating={topProduct.rating} reviewCount={topProduct.reviewCount} /></div></aside>
+    </div></div></div>
+  </main>
+</BaseLayout>
+
+<style>
+  .seo-guide { margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #f0ebe3; }
+  .seo-guide .rich-text h3, .seo-guide h3 { margin-top: 2rem; margin-bottom: .75rem; font-size: 1.25rem; font-weight: 600; color: #242424; }
+  .seo-guide p { margin-bottom: 1rem; line-height: 1.8; color: #444; }
+  .faq-section { margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #f0ebe3; }
+  .template-promo-block { margin: 1.75rem 0 2rem; }
+</style>
