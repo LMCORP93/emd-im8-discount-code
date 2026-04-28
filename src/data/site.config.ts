@@ -26,7 +26,7 @@ const products: Product[] = [
     brand: 'IM8',
     slug: 'im8-daily-ultimate-essentials',
     image: '/images/products/im8-product.webp',
-    brandLogo: '/logo.svg',
+    brandLogo: 'https://cdn.prod.website-files.com/68c02c2c477fdd467e6e08a1/69380c53746ebfad67adf684_Header-Logo-New.webp',
     rating: 8.8,
     reviewCount: 500,
     promoCode: 'LMC',
@@ -107,6 +107,7 @@ const config: SiteConfig = {
   pages: [
     { type: 'blog', label: 'Discount Code', slug: '/' },
     { type: 'blog', label: 'IM8 vs AG1', slug: '/im8-vs-ag1/' },
+    { type: 'blog', label: 'IM8 Reviews', slug: '/im8-reviews/' },
   ],
 };
 
