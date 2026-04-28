@@ -72,6 +72,7 @@ const config: SiteConfig = {
     description: 'Find the current IM8 discount code, promo code, coupon, first-order offer, IM8 vs AG1 comparison, reviews, scam checks and price notes.',
     ogImage: '/og-image.jpg',
   },
+  analyticsMeasurementId: 'G-3V9ZDPJ6GP',
   breadcrumbs: [{ label: 'IM8 Discount Code', href: '/' }],
   quickSummary: {
     assets: ['Current IM8 offer guidance', 'First-order and subscription savings explained', 'Review, ingredients and AG1 comparison intent covered'],
