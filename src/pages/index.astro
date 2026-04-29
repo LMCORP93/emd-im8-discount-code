@@ -52,6 +52,21 @@ const pageDescription = 'Looking for an IM8 discount code? Check the current pro
         <section class="template-promo-block" aria-label="Verified IM8 offer">
           <ReviewPromoCard product={promoProduct} />
         </section>
+            <section id="ranking-methodology" class="methodology-box">
+              <h2>How we ranked the products</h2>
+              <p>Our ranking combines editorial and practical criteria to help you choose a formula that fits the use case, instead of looking only at price or discount level.</p>
+              <ul>
+                  <li>Formula and active ingredient profile</li>
+                  <li>Real price after discount and cost per use</li>
+                  <li>Availability and ordering experience</li>
+                  <li>Customer reviews and public trust signals</li>
+                  <li>Brand transparency on composition and claims</li>
+                  <li>Promo code clarity, conditions and value</li>
+                  <li>Fit with the main need covered on this page</li>
+              </ul>
+              <p class="methodology-box__disclaimer"><strong>Transparence affiliation.</strong> Some links are affiliate links: LMC may earn a commission if you buy through them, at no extra cost to you. This does not remove our editorial filter: a product is recommended only when it fits the intended use case.</p>
+            </section>
+
 
         <TableOfContents items={config.tocItems} />
 
@@ -189,4 +204,14 @@ const pageDescription = 'Looking for an IM8 discount code? Check the current pro
   .seo-guide p { margin-bottom: 1rem; line-height: 1.8; color: #444; }
   .faq-section { margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #f0ebe3; }
   .template-promo-block { margin: 1.75rem 0 2rem; }
+
+.methodology-box { margin: 2rem 0; padding: 1.35rem; border: 1px solid #eadfce; border-radius: 18px; background: #f8f4ec; color: #2f2922; }
+.methodology-box, .methodology-box h2, .methodology-box p, .methodology-box li, .methodology-box strong { color: #2f2922; }
+.methodology-box h2 { margin: 0 0 .75rem; font-size: clamp(1.35rem, 2vw, 1.8rem); line-height: 1.15; }
+.methodology-box p { margin: 0 0 .9rem; line-height: 1.65; }
+.methodology-box ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .45rem 1rem; margin: .8rem 0 1rem; padding-left: 1.1rem; }
+.methodology-box li { line-height: 1.45; }
+.methodology-box__disclaimer { margin-top: .85rem !important; padding-top: .85rem; border-top: 1px solid #eadfce; font-size: .92rem; }
+@media (max-width: 768px) { .methodology-box ul { grid-template-columns: 1fr; } .methodology-box { padding: 1rem; } }
+
 </style>
