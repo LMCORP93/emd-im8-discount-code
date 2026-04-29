@@ -4,6 +4,7 @@ import BlogHero from '@/components/BlogHero.astro';
 import TableOfContents from '@/components/TableOfContents.astro';
 import ContentImage from '@/components/ContentImage.astro';
 import ReviewPromoCard from '@/components/ReviewPromoCard.astro';
+import InBriefBlock from '@/components/InBriefBlock.astro';
 import SidebarCTA from '@/components/SidebarCTA.astro';
 import FAQSection from '@/components/FAQSection.astro';
 import config from '@/data/site.config';
@@ -32,6 +33,8 @@ const faq = [
   { question: 'Does IM8 have side effects?', answer: 'Any daily supplement powder can cause tolerance issues for some users, including digestive discomfort, bloating, sweetener sensitivity or overlap with other supplements. Read the label and ask a professional if pregnant, medicated or unsure.' },
   { question: 'Is IM8 worth it?', answer: 'IM8 is worth considering if you want a premium all-in-one daily powder, the formula fits your routine and the current discount lowers the first-order risk. It is less compelling if you only need one narrow ingredient at the lowest price.' },
 ];
+
+const inBrief = { title: 'IM8 reviews: our short verdict', paragraphs: ['The useful IM8 review question is not whether the product sounds premium. It is whether the formula, price after discount, taste, subscription terms and daily-use logic make sense for you.', 'IM8 is our preferred recommendation on this EMD because the commercial path is clean: strong brand positioning, current discount intent and a clear all-in-one supplement story.'], assets: ['Strong fit with review and discount-code search intent', 'Premium daily supplement angle that is easy to understand', 'Clearer buying path than generic wellness reviews', 'Useful comparison against AG1-style alternatives'], considerations: ['Premium price still needs to make sense per serving', 'Results depend on consistency and the rest of the routine'] };
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
@@ -75,6 +78,7 @@ const faq = [
   <main style="background-color:#ffffff;">
     <div class="container-large padding-global"><div class="padding-section-medium"><div class="blog-grid">
       <div class="content-column">
+        <InBriefBlock title={inBrief.title} paragraphs={inBrief.paragraphs} assets={inBrief.assets} considerations={inBrief.considerations} product={topProduct} />
         <section id="quick-verdict" class="rich-text">
           <h2>Quick verdict: what do IM8 reviews really tell us?</h2>
           <p>If you search for <strong>IM8 reviews</strong>, <strong>IM8 Health reviews</strong>, <strong>IM8 supplement review</strong> or <strong>is IM8 a scam</strong>, you are probably close to buying but not fully reassured yet. That is the right instinct. Premium daily powders are not impulse purchases. They sit in your daily routine, your budget and sometimes your subscription list.</p>

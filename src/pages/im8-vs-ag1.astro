@@ -4,6 +4,7 @@ import BlogHero from '@/components/BlogHero.astro';
 import TableOfContents from '@/components/TableOfContents.astro';
 import ContentImage from '@/components/ContentImage.astro';
 import ReviewPromoCard from '@/components/ReviewPromoCard.astro';
+import InBriefBlock from '@/components/InBriefBlock.astro';
 import SidebarCTA from '@/components/SidebarCTA.astro';
 import FAQSection from '@/components/FAQSection.astro';
 import config from '@/data/site.config';
@@ -30,6 +31,8 @@ const faq = [
   { question: 'Can I use an IM8 discount code when comparing IM8 vs AG1?', answer: 'Yes, if a verified IM8 code or partner offer is active, it can lower the first-order price and make the IM8 trial less risky. Confirm the discount in the checkout before payment.' },
   { question: 'Should I buy IM8 or AG1 first?', answer: 'If your main hesitation is price and you have a working IM8 offer, IM8 is a logical first trial. If you already know you want a classic greens formula with a long track record, AG1 may fit your expectation better.' },
 ];
+
+const inBrief = { title: 'IM8 vs AG1: the quick verdict', paragraphs: ['IM8 and AG1 do not solve the exact same buying problem. AG1 is the famous greens benchmark, while IM8 is more relevant here because the page is built around the current discount-code and all-in-one daily supplement intent.', 'Our practical verdict: choose IM8 if you want the strongest offer path on this EMD and a premium daily formula. Compare AG1 only if brand familiarity matters more than price and promo value.'], assets: ['Clearer discount-code path with IM8 on this site', 'Premium all-in-one positioning for daily routine buyers', 'Comparison helps avoid choosing only by brand awareness', 'Better fit for commercial intent around IM8 coupon searches'], considerations: ['AG1 still has stronger mainstream recognition', 'Neither product replaces a complete diet or medical advice'] };
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
@@ -73,6 +76,7 @@ const faq = [
   <main style="background-color:#ffffff;">
     <div class="container-large padding-global"><div class="padding-section-medium"><div class="blog-grid">
       <div class="content-column">
+        <InBriefBlock title={inBrief.title} paragraphs={inBrief.paragraphs} assets={inBrief.assets} considerations={inBrief.considerations} product={topProduct} />
         <section id="quick-verdict" class="rich-text">
           <h2>Quick verdict: IM8 vs AG1, which should you try first?</h2>
           <p>If you are comparing <strong>IM8 vs AG1</strong>, you are probably not looking for a basic multivitamin. You are comparing two premium daily supplement drinks that promise convenience, better routines and fewer separate pills or powders. That is why the decision should not be based on branding alone.</p>
