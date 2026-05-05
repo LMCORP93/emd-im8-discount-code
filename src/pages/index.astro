@@ -7,6 +7,7 @@ import ReviewPromoCard from '@/components/ReviewPromoCard.astro';
 import SidebarCTA from '@/components/SidebarCTA.astro';
 import FAQSection from '@/components/FAQSection.astro';
 import config from '@/data/site.config';
+import AuthorBioCard from '@/components/AuthorBioCard.astro';
 
 const topProduct = config.products[0];
 const promoProduct = { ...topProduct, productCategory: topProduct.productType, shipping: 'US / International' };
@@ -188,6 +189,8 @@ const pageDescription = 'Looking for an IM8 discount code? Check the current pro
         <section class="template-promo-block" aria-label="Try IM8 with current discount">
           <ReviewPromoCard product={promoProduct} />
         </section>
+
+        <AuthorBioCard />
 
         <section id="faq" class="faq-section"><FAQSection faq={config.faq} title="Frequently asked questions" /></section>
       </div>

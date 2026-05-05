@@ -8,6 +8,7 @@ import InBriefBlock from '@/components/InBriefBlock.astro';
 import SidebarCTA from '@/components/SidebarCTA.astro';
 import FAQSection from '@/components/FAQSection.astro';
 import config from '@/data/site.config';
+import AuthorBioCard from '@/components/AuthorBioCard.astro';
 
 const topProduct = config.products[0];
 const promoProduct = { ...topProduct, productCategory: topProduct.productType, shipping: 'US / International' };
@@ -175,6 +176,8 @@ const inBrief = { title: 'IM8 reviews: our short verdict', paragraphs: ['The use
         <section class="template-promo-block" aria-label="Try IM8 after reading the review">
           <ReviewPromoCard product={promoProduct} />
         </section>
+
+        <AuthorBioCard />
 
         <section id="faq" class="faq-section"><FAQSection faq={faq} title="Frequently asked questions" /></section>
       </div>
