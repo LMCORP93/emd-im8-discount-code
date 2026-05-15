@@ -8,6 +8,7 @@ import SidebarCTA from '@/components/SidebarCTA.astro';
 import FAQSection from '@/components/FAQSection.astro';
 import config from '@/data/site.config';
 import AuthorBioCard from '@/components/AuthorBioCard.astro';
+import ArticleGrid from '@/components/ArticleGrid.astro';
 
 const topProduct = config.products[0];
 const promoProduct = { ...topProduct, productCategory: topProduct.productType, shipping: 'US / International' };
@@ -183,6 +184,7 @@ const pageDescription = 'Looking for a working IM8 discount code? Check the veri
               brandName={topProduct.brand} promoCode={topProduct.promoCode} promoPercent={topProduct.promoPercent} originalPrice={topProduct.originalPrice} discountPrice={topProduct.discountPrice} ctaLink={topProduct.affiliateLink} heroImage={topProduct.image} rating={topProduct.rating} reviewCount={topProduct.reviewCount} /></div></aside>
     </div></div></div>
   </main>
+  <ArticleGrid />
 </BaseLayout>
 
 <style>
