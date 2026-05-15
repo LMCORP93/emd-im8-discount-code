@@ -35,7 +35,7 @@ const products: Product[] = [
     discountPrice: '$100.80',
     affiliateLink: 'https://taap.it/im8health',
     origin: '🇺🇸 United States',
-    availability: 'In stock',
+    availability: 'Delivery to the United States available; check final terms at checkout',
     productType: 'All-in-one daily supplement powder',
     pros: [
       'Premium daily all-in-one formula positioning',
