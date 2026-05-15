@@ -106,9 +106,9 @@ const config: SiteConfig = {
     { id: 'faq', label: 'FAQ' },
   ],
   pages: [
-    { type: 'blog', label: 'Discount Code', slug: '/' },
-    { type: 'blog', label: 'IM8 vs AG1', slug: '/im8-vs-ag1/' },
-    { type: 'blog', label: 'IM8 Reviews', slug: '/im8-reviews/' },
+    { type: 'blog', label: 'Discount Code', slug: '/', image: '/images/content/im8-discount-code-hero.webp' },
+    { type: 'blog', label: 'IM8 vs AG1', slug: '/im8-vs-ag1/', image: '/images/content/im8-vs-ag1-comparison.webp' },
+    { type: 'blog', label: 'IM8 Reviews', slug: '/im8-reviews/', image: '/images/content/im8-discount-code-hero.webp' },
   ],
 };
 
