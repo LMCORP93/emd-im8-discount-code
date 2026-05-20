@@ -7,7 +7,7 @@ const legalPageDescription = 'Legal information and mandatory notices for this w
 const legalPageUrl = new URL(Astro.url.pathname, config.domain).toString();
 ---
 
-<BaseLayout title="Legal Notice | IM8 Discount Code" description="Legal notice for IM8 Discount Code, including publisher information, editorial responsibility, affiliate disclosure and contact details.">
+<BaseLayout title="Legal Notice | IM8 Discount Code" description="Legal notice for IM8 Discount Code, including publisher information, editorial responsibility and contact details.">
 
   <script type="application/ld+json" slot="json-ld" set:html={JSON.stringify({
     '@context': 'https://schema.org',
