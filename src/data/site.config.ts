@@ -88,6 +88,8 @@ const config: SiteConfig = {
     { question: 'Is IM8 better than AG1?', answer: 'It depends on your goal. Compare formula, taste, serving cost, reviews, ingredients and what each product replaces in your routine before choosing.' },
     { question: 'Is IM8 a scam or legit?', answer: 'IM8 should be judged like any supplement brand: check the official site, ingredient label, third-party testing claims, reviews, refund policy and checkout terms. Avoid judging only from coupon pages or social hype.' },
     { question: 'Are IM8 coupon sites reliable?', answer: 'Not always. Many coupon sites display expired or unverified codes. A verified offer link is usually safer than random coupon lists.' },
+    { question: 'Is IM8 tested for BMAA, heavy metals and microcystins?', answer: 'IM8 makes quality and safety claims on its official site. Before purchasing, check the latest third-party testing page, batch certificates and ingredient transparency directly from the brand. Do not rely on coupon pages for safety information.' },
+    { question: 'What is NCT06655597 and is it related to IM8?', answer: 'NCT06655597 is a clinical trial registration number associated with research involving IM8 Daily Ultimate Essentials. Check the official trial registry and IM8 clinical page for the most current status and published results.' },
   ],
   products,
   tocItems: [
