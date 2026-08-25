@@ -34,7 +34,7 @@ const products: Product[] = [
     originalPrice: '$112.00',
     discountPrice: '$100.80',
     affiliateLink: 'https://im8health.com/products/essentials-pro?snowball=LMC&selling_plan=2948432039',
-    origin: '🇺🇸 United States',
+    origin: 'United States',
     availability: 'Delivery to the United States available; check final terms at checkout',
     productType: 'All-in-one daily supplement powder',
     pros: [
